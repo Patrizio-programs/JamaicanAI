@@ -2,10 +2,10 @@ import os
 import telebot
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
-from chatterbot.storage import StorageAdapter
 
 
-import wikipedia
+
+
 
 # Set up the Telegram bot
 my_secret = '6160231980:AAGz70x3VQqYgKnVgXGx6o3R5wZaJzdBBVs'
@@ -27,7 +27,7 @@ trainer.export_for_training('./mybot_corpus.json')
 # Define the start function
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.reply_to(message, "Hello")
+    bot.reply_to(message, "Hello there")
 
 # Define the test function
 @bot.message_handler(commands=['test'])
